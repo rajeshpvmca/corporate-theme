@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - Page Not Found | Stackly</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+      :root {
+        --primary: #e8a020;
+        --dark: #1a1a2e;
+        --text: #555;
+        --white: #fff;
+      }
+
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background: var(--dark);
+        color: var(--white);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      /* ── Floating particles background ── */
+      .particles {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 0;
+      }
+      .particle {
+        position: absolute;
+        border-radius: 50%;
+        background: var(--primary);
+        opacity: 0.12;
+        animation: float linear infinite;
+      }
+
+      @keyframes float {
+        0%   { transform: translateY(110vh) scale(0); opacity: 0; }
+        10%  { opacity: 0.12; }
+        90%  { opacity: 0.12; }
+        100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+      }
+
+      /* ── Main wrapper ── */
+      .wrapper {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        padding: 40px 20px;
+        animation: fadeUp 0.9s ease both;
+      }
+
+      @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(40px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+
+      /* ── Logo ── */
+      .logo {
+        font-size: 1.6rem;
+        font-weight: 800;
+        color: var(--primary);
+        text-decoration: none;
+        display: inline-block;
+        margin-bottom: 50px;
+        animation: fadeUp 0.9s 0.1s ease both;
+      }
+
+      /* ── 404 glitch number ── */
+      .error-num {
+        font-size: clamp(6rem, 20vw, 14rem);
+        font-weight: 900;
+        line-height: 1;
+        color: var(--primary);
+        position: relative;
+        display: inline-block;
+        animation: fadeUp 0.9s 0.2s ease both;
+      }
+
+      /* glitch layers */
+      .error-num::before,
+      .error-num::after {
+        content: "404";
+        position: absolute;
+        inset: 0;
+        font-size: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+      }
+      .error-num::before {
+        color: #00f0ff;
+        clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+        animation: glitch1 3s infinite;
+        left: 3px;
+      }
+      .error-num::after {
+        color: #ff3c6e;
+        clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+        animation: glitch2 3s infinite;
+        left: -3px;
+      }
+
+      @keyframes glitch1 {
+        0%, 90%, 100% { transform: translate(0); opacity: 0; }
+        92%            { transform: translate(-4px, 2px); opacity: 1; }
+        94%            { transform: translate(4px, -2px); opacity: 1; }
+        96%            { transform: translate(0); opacity: 0; }
+      }
+      @keyframes glitch2 {
+        0%, 88%, 100% { transform: translate(0); opacity: 0; }
+        90%            { transform: translate(4px, -2px); opacity: 1; }
+        93%            { transform: translate(-4px, 2px); opacity: 1; }
+        95%            { transform: translate(0); opacity: 0; }
+      }
+
+      /* ── Divider line ── */
+      .divider {
+        width: 80px;
+        height: 3px;
+        background: var(--primary);
+        margin: 24px auto;
+        border-radius: 2px;
+        animation: expandLine 1s 0.5s ease both;
+        transform-origin: center;
+      }
+      @keyframes expandLine {
+        from { transform: scaleX(0); }
+        to   { transform: scaleX(1); }
+      }
+
+      /* ── Animated heading ── */
+      .error-title {
+        font-size: clamp(1.4rem, 4vw, 2.2rem);
+        font-weight: 700;
+        margin-bottom: 16px;
+        animation: fadeUp 0.9s 0.35s ease both;
+      }
+      .error-title .word {
+        display: inline-block;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: wordIn 0.5s ease forwards;
+      }
+      .error-title .word:nth-child(1) { animation-delay: 0.5s; }
+      .error-title .word:nth-child(2) { animation-delay: 0.65s; }
+      .error-title .word:nth-child(3) { animation-delay: 0.8s; }
+      .error-title .word:nth-child(4) { animation-delay: 0.95s; }
+
+      @keyframes wordIn {
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      /* ── Description ── */
+      .error-desc {
+        color: #aaa;
+        font-size: 1rem;
+        max-width: 480px;
+        margin: 0 auto 40px;
+        line-height: 1.8;
+        animation: fadeUp 0.9s 0.6s ease both;
+      }
+
+      /* ── Buttons ── */
+      .btns {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+        animation: fadeUp 0.9s 0.8s ease both;
+      }
+      .btn-home {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--primary);
+        color: var(--white);
+        padding: 13px 30px;
+        border-radius: 4px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: opacity 0.3s, transform 0.3s;
+      }
+      .btn-home:hover { opacity: 0.85; transform: translateY(-2px); }
+
+      .btn-back {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        border: 2px solid rgba(255,255,255,0.3);
+        color: var(--white);
+        padding: 13px 30px;
+        border-radius: 4px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s;
+      }
+      .btn-back:hover { border-color: var(--primary); color: var(--primary); transform: translateY(-2px); }
+
+      /* ── Responsive ── */
+      @media (max-width: 480px) {
+        .btns { flex-direction: column; align-items: center; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- Particles -->
+    <div class="particles" id="particles"></div>
+
+    <div class="wrapper">
+      <a href="index.html" class="logo">Stackly</a>
+
+      <div class="error-num">404</div>
+
+      <div class="divider"></div>
+
+      <h2 class="error-title">
+        <span class="word">Oops!&nbsp;</span>
+        <span class="word">Page&nbsp;</span>
+        <span class="word">Not&nbsp;</span>
+        <span class="word">Found</span>
+      </h2>
+
+      <p class="error-desc">
+        The page you're looking for might have been removed, renamed,
+        or is temporarily unavailable.
+      </p>
+
+      <div class="btns">
+        <a href="index.html" class="btn-home"><i class="fa fa-house"></i> Back to Home</a>
+        <a href="javascript:history.back()" class="btn-back"><i class="fa fa-arrow-left"></i> Go Back</a>
+      </div>
+
+    </div>
+
+    <script>
+      // Particles
+      const container = document.getElementById('particles');
+      for (let i = 0; i < 22; i++) {
+        const p = document.createElement('div');
+        p.className = 'particle';
+        const size = Math.random() * 18 + 6;
+        p.style.cssText = `
+          width:${size}px; height:${size}px;
+          left:${Math.random() * 100}%;
+          animation-duration:${Math.random() * 12 + 8}s;
+          animation-delay:${Math.random() * 10}s;
+        `;
+        container.appendChild(p);
+      }
+    </script>
+  </body>
+</html>

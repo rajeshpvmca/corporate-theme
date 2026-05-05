@@ -1,0 +1,726 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stackly - Business Consulting</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> -->
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="loader-box">
+        <div class="loader-ring"></div>
+        <div class="loader-logo">Stackly</div>
+        <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+        <p class="loader-text">Loading, please wait...</p>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+      <div class="header-topbar">
+        <div class="container">
+          <div class="topbar-inner">
+            <ul class="topbar-left">
+              <li>
+                <a href="#"><i class="fa fa-envelope"></i> Stackly@gmail.com</a>
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fa fa-clock"></i> Mon - Fri : 09:00AM - 6:00PM</a
+                >
+              </li>
+            </ul>
+            <ul class="topbar-right">
+              <li>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <nav class="navbar">
+        <div class="container">
+          <div class="nav-inner">
+            <a href="index.html" class="logo">
+              <span class="logo-text">Stackly</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+              <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+              <li><a href="index.html">Home</a></li>
+              <li class="has-dropdown">
+                <a href="#">Services <i class="fa fa-chevron-down"></i></a>
+                <ul class="dropdown">
+                  <li><a href="404.html">Services</a></li>
+                  <li><a href="404.html">Services Details</a></li>
+                </ul>
+              </li>
+              <li class="has-dropdown">
+                <a href="#">Page <i class="fa fa-chevron-down"></i></a>
+                <ul class="dropdown">
+                  <li><a href="404.html">About Us</a></li>
+                  <li><a href="404.html">Portfolio</a></li>
+                  <li><a href="404.html">Team</a></li>
+                </ul>
+              </li>
+              <li class="has-dropdown">
+                <a href="#">News <i class="fa fa-chevron-down"></i></a>
+                <ul class="dropdown">
+                  <li><a href="404.html">Blog Grid</a></li>
+                  <li><a href="404.html">Blog Details</a></li>
+                </ul>
+              </li>
+              <li><a href="404.html">Contact</a></li>
+            </ul>
+            <div class="nav-contact">
+              <i class="fa fa-phone"></i>
+              <div>
+                <span>Tell With US</span>
+                <p>+91 9768453201</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Banner Slider -->
+    <section class="banner" id="banner">
+      <div class="slides">
+         <div
+          class="slide active"
+          style="background-image: url(&quot;assets/img/banner-1.jpg&quot;)"
+        >
+          <div class="slide-content">
+            <span>We're the best</span>
+            <h1>Best Solution Each of Business Stackly</h1>
+            <div class="banner-btns">
+              <a href="404.html" class="btn-primary"
+                >Quote Now <i class="fa fa-arrow-right"></i
+              ></a>
+              <a href="404.html" class="btn-outline"
+                >Read More <i class="fa fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="slide"
+          style="background-image: url(&quot;assets/img/banner-2.jpg&quot;)"
+        >
+          <div class="slide-content">
+            <span>We're the best</span>
+            <h1>Provides Export Advice</h1>
+            <div class="banner-btns">
+              <a href="404.html" class="btn-primary"
+                >Quote Now <i class="fa fa-arrow-right"></i
+              ></a>
+              <a href="404.html" class="btn-outline"
+                >Read More <i class="fa fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="slide-prev" id="slidePrev">
+        <i class="fa fa-arrow-left"></i>
+      </button>
+      <button class="slide-next" id="slideNext">
+        <i class="fa fa-arrow-right"></i>
+      </button>
+    </section>
+
+    <!-- Features -->
+    <section class="features section-padding">
+      <div class="container">
+        <div class="grid-4">
+          <div class="feature-item fade-in">
+            <span class="feature-num">01</span>
+            <div class="feature-icon"><i class="fa fa-chart-bar"></i></div>
+            <h4>Strong Business Planing</h4>
+          </div>
+          <div class="feature-item fade-in">
+            <span class="feature-num">02</span>
+            <div class="feature-icon"><i class="fa fa-briefcase"></i></div>
+            <h4>Business Management</h4>
+          </div>
+          <div class="feature-item fade-in">
+            <span class="feature-num">03</span>
+            <div class="feature-icon"><i class="fa fa-bullhorn"></i></div>
+            <h4>Marketing Advice</h4>
+          </div>
+          <div class="feature-item fade-in">
+            <span class="feature-num">04</span>
+            <div class="feature-icon"><i class="fa fa-database"></i></div>
+            <h4>Expert User Research</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about section-padding">
+      <div class="container">
+        <div class="grid-2 align-center">
+          <div class="about-images fade-in">
+            <img src="assets/img/about-1.jpg" alt="About" class="about-main" />
+            <img
+              src="assets/img/about-2.jpg"
+              alt="About small"
+              class="about-small"
+            />
+          </div>
+          <div class="about-content fade-in">
+            <span class="section-tag">Company About</span>
+            <h2>We take care of your business to grow</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <div class="about-list">
+              <p><i class="fa fa-check"></i> Business Structures</p>
+              <p><i class="fa fa-check"></i> Support Customization</p>
+              <p><i class="fa fa-check"></i> Strong Business Planing</p>
+              <p><i class="fa fa-check"></i> Security &amp; Location</p>
+            </div>
+            <div class="about-bottom">
+              <a href="404.html" class="btn-theme"
+                >Read More <i class="fa fa-arrow-right"></i
+              ></a>
+              <img
+                src="assets/img/signature.png"
+                alt="Signature"
+                class="signature"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services section-padding">
+      <div class="container">
+        <div class="section-title">
+          <span class="section-tag">Our Services</span>
+          <h2>Business Services</h2>
+        </div>
+        <div class="grid-3">
+          <div class="service-item fade-in">
+            <div class="service-top">
+              <div class="service-icon"><i class="fa fa-suitcase"></i></div>
+              <h3>Financial Management</h3>
+            </div>
+            <p>
+              Maecenas sagittis, quam vel interdum malesuada, nibh metus
+              consectetur felis, cursus
+            </p>
+            <a href="404.html">Read More</a>
+          </div>
+          <div class="service-item fade-in">
+            <div class="service-top">
+              <div class="service-icon"><i class="fa fa-file-alt"></i></div>
+              <h3>Banking Financial</h3>
+            </div>
+            <p>
+              Maecenas sagittis, quam vel interdum malesuada, nibh metus
+              consectetur felis, cursus
+            </p>
+            <a href="404.html">Read More</a>
+          </div>
+          <div class="service-item fade-in">
+            <div class="service-top">
+              <div class="service-icon"><i class="fa fa-coins"></i></div>
+              <h3>Investment Consulting</h3>
+            </div>
+            <p>
+              Maecenas sagittis, quam vel interdum malesuada, nibh metus
+              consectetur felis, cursus
+            </p>
+            <a href="404.html">Read More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section class="portfolio section-padding">
+      <div class="container">
+        <div class="portfolio-header">
+          <div>
+            <span class="section-tag">Our Portfolio</span>
+            <h2>Recent Case Study</h2>
+          </div>
+          <div class="portfolio-nav">
+            <button id="portPrev"><i class="fa fa-arrow-left"></i></button>
+            <button id="portNext"><i class="fa fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class=" container portfolio-slider-wrap">
+        <div class="portfolio-slider" id="portfolioSlider">
+          <div class="portfolio-item">
+            <img src="assets/img/portfolio-1.jpg" alt="Portfolio 1" />
+            <div class="portfolio-info">
+              <h3><a href="404.html">Business Strategy</a></h3>
+              <p>Strategy Management</p>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <img src="assets/img/portfolio-2.jpg" alt="Portfolio 2" />
+            <div class="portfolio-info">
+              <h3><a href="404.html">Business Planing</a></h3>
+              <p>Strategy Management</p>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <img src="assets/img/portfolio-3.jpg" alt="Portfolio 3" />
+            <div class="portfolio-info">
+              <h3><a href="404.html">Business Management</a></h3>
+              <p>Strategy Management</p>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <img src="assets/img/portfolio-2.jpg" alt="Portfolio 3" />
+            <div class="portfolio-info">
+              <h3><a href="404.html">Business Consulting</a></h3>
+              <p>Strategy Consulting</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section class="team section-padding">
+      <div class="container">
+        <div class="section-title">
+          <span class="section-tag">Our Team</span>
+          <h2>Meet Our Expert Panel</h2>
+        </div>
+        <div class="grid-4">
+          <div class="team-item fade-in">
+            <div class="team-img-wrap">
+              <img src="assets/img/team-1.png" alt="Michel Aoun" />
+              <div class="team-overlay">
+                <ul class="social-icons">
+                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="team-info">
+              <h5>Michel Aoun</h5>
+              <p>Senior Designer</p>
+            </div>
+          </div>
+          <div class="team-item fade-in">
+            <div class="team-img-wrap">
+              <img src="assets/img/team-2.png" alt="Semsem" />
+              <div class="team-overlay">
+                <ul class="social-icons">
+                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="team-info">
+              <h5>Semsem</h5>
+              <p>CEO &amp; Founder</p>
+            </div>
+          </div>
+          <div class="team-item fade-in">
+            <div class="team-img-wrap">
+              <img src="assets/img/team-3.png" alt="Steve Rhodes" />
+              <div class="team-overlay">
+                <ul class="social-icons">
+                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="team-info">
+              <h5>Steve Rhodes</h5>
+              <p>Project Manager</p>
+            </div>
+          </div>
+          <div class="team-item fade-in">
+            <div class="team-img-wrap">
+              <img src="assets/img/team-4.png" alt="Cansu Tuman" />
+              <div class="team-overlay">
+                <ul class="social-icons">
+                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="team-info">
+              <h5>Cansu Tuman</h5>
+              <p>Content Writer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Counter -->
+    <section
+      class="counter section-padding"
+      style="background-image: url(&quot;assets/img/counter.png&quot;)"
+    >
+      <div class="container">
+        <div class="grid-4">
+          <div class="counter-item">
+            <i class="fa fa-project-diagram"></i>
+            <h2><span class="count" data-target="334">0</span>K</h2>
+            <p>Project Complete</p>
+          </div>
+          <div class="counter-item">
+            <i class="fa fa-users"></i>
+            <h2><span class="count" data-target="429">0</span>K</h2>
+            <p>Satisfied Customers</p>
+          </div>
+          <div class="counter-item">
+            <i class="fa fa-trophy"></i>
+            <h2><span class="count" data-target="289">0</span>K</h2>
+            <p>Get National Award</p>
+          </div>
+          <div class="counter-item">
+            <i class="fa fa-user-tie"></i>
+            <h2><span class="count" data-target="759">0</span>K</h2>
+            <p>Expert Team Members</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="experience section-padding">
+      <div class="container">
+        <div class="grid-2 align-center experience-bg">
+          <div class="experience-left fade-in">
+            <span class="section-tag">Work Experience</span>
+            <h2>The best content management system</h2>
+            <div class="skill-item">
+              <div class="skill-header">
+                <h5>Business Strategy</h5>
+                <span>80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="80"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <h5>Development</h5>
+                <span>95%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="95"></div>
+              </div>
+            </div>
+          </div>
+          <div class="experience-right fade-in">
+            <div class="exp-image-wrap">
+              <img src="assets/img/experience.jpg" alt="Experience" />
+              <div class="exp-badge">
+                <h2><span class="count" data-target="119">0</span>+</h2>
+                <p>Satisfied Client</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="choose section-padding">
+      <div class="container">
+        <div class="grid-2 align-center">
+          <div class="choose-images fade-in">
+            <img
+              src="assets/img/choose-2.jpg"
+              alt="Choose"
+              class="choose-main"
+            />
+            <img
+              src="assets/img/choose-1.jpg"
+              alt="Choose small"
+              class="choose-small"
+            />
+          </div>
+          <div class="choose-content fade-in">
+            <span class="section-tag">Why Choose Us</span>
+            <h2>How to grow Your small business</h2>
+            <div class="choose-list">
+              <div class="choose-list-item">
+                <i class="fa fa-cogs fa-2x"></i>
+                <div>
+                  <h5>Great Small Business Ideas</h5>
+                  <p>
+                    Morbi quam felis, faucibus a tincidunt ut, blandit ac dui.
+                    Aliquam erat volutpat.
+                  </p>
+                </div>
+              </div>
+              <div class="choose-list-item">
+                <i class="fa fa-headset fa-2x"></i>
+                <div>
+                  <h5>Part Time Business Ideas</h5>
+                  <p>
+                    Morbi quam felis, faucibus a tincidunt ut, blandit ac dui.
+                    Aliquam erat volutpat.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a href="404.html" class="btn-theme"
+              >Read More <i class="fa fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonial section-padding">
+      <div class="container">
+        <div class="grid-2 align-center">
+          <div class="testimonial-title fade-in">
+            <span class="section-tag">Testimonial</span>
+            <h2>What they are telling About Us</h2>
+            <div class="test-nav">
+              <button id="testPrev"><i class="fa fa-arrow-left"></i></button>
+              <button id="testNext"><i class="fa fa-arrow-right"></i></button>
+            </div>
+          </div>
+          <div class="testimonial-slider-wrap">
+            <div class="testimonial-slider" id="testimonialSlider">
+              <div class="testimonial-item active">
+                <i class="fa fa-quote-left"></i>
+                <h5>Paris Jackson</h5>
+                <h6>Founder Of CEO</h6>
+                <p>
+                  Integer faucibus venenatis pharetra. Vestibulum ornare mauris
+                  enim, et vulputate nisi semper
+                </p>
+                <img src="assets/img/testimonial-1.jpg" alt="Paris Jackson" />
+              </div>
+              <div class="testimonial-item">
+                <i class="fa fa-quote-left"></i>
+                <h5>Janet Jackson</h5>
+                <h6>Senior Marketer</h6>
+                <p>
+                  Integer faucibus venenatis pharetra. Vestibulum ornare mauris
+                  enim, et vulputate nisi semper
+                </p>
+                <img src="assets/img/testimonial-2.jpg" alt="Janet Jackson" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Management CTA -->
+    <section
+      class="management section-padding"
+      style="background-image: url(&quot;assets/img/management.jpg&quot;)"
+    >
+      <div class="container">
+        <div class="grid-2 align-center">
+          <div class="management-title fade-in">
+            <span class="section-tag">Business Management</span>
+            <h2>Manage Promote and Grow Your Business Online</h2>
+            <a href="404.html" class="btn-primary"
+              >Quote Now <i class="fa fa-arrow-right"></i
+            ></a>
+          </div>
+          <div class="management-contact fade-in">
+            <i class="fa fa-phone fa-2x"></i>
+            <span>Tell With US</span>
+            <p>+91 9768453201</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog -->
+    <section class="blog section-padding">
+      <div class="container">
+        <div class="section-title">
+          <span class="section-tag">Blog &amp; News</span>
+          <h2>Blog &amp; New Article</h2>
+        </div>
+        <div class="grid-3">
+          <div class="blog-item fade-in">
+            <img src="assets/img/blog-1.jpg" alt="Blog 1" />
+            <div class="blog-content">
+              <span><i class="fa fa-calendar"></i> 22 Feb, 2022</span>
+              <h3>
+                <a href="404.html"
+                  >Business Loan and Financing Options</a
+                >
+              </h3>
+              <ul>
+                <li><i class="fa fa-user"></i> Mitchell Starc</li>
+                <li><i class="fa fa-comment"></i> Comments (3)</li>
+              </ul>
+              <a href="404.html" class="read-more">Read More</a>
+            </div>
+          </div>
+          <div class="blog-item fade-in">
+            <img src="assets/img/blog-2.jpg" alt="Blog 2" />
+            <div class="blog-content">
+              <span><i class="fa fa-calendar"></i> 22 Feb, 2022</span>
+              <h3>
+                <a href="404.html"
+                  >Business Liability Insurance Providers</a
+                >
+              </h3>
+              <ul>
+                <li><i class="fa fa-user"></i> Mitchell Starc</li>
+                <li><i class="fa fa-comment"></i> Comments (2)</li>
+              </ul>
+              <a href="404.html" class="read-more">Read More</a>
+            </div>
+          </div>
+          <div class="blog-item fade-in">
+            <img src="assets/img/blog-3.jpg" alt="Blog 3" />
+            <div class="blog-content">
+              <span><i class="fa fa-calendar"></i> 22 Feb, 2022</span>
+              <h3>
+                <a href="404.html"
+                  >Increase your product or service's visibility</a
+                >
+              </h3>
+              <ul>
+                <li><i class="fa fa-user"></i> Mitchell Starc</li>
+                <li><i class="fa fa-comment"></i> Comments (5)</li>
+              </ul>
+              <a href="404.html" class="read-more">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solution CTA -->
+    <section class="solution">
+      <div class="container">
+        <div
+          class="solution-inner"
+          style="background-image: url(&quot;assets/img/solution.png&quot;)"
+        >
+          <h2>Contact Us for a solution</h2>
+          <a href="404.html" class="btn-primary"
+            >Contact Us <i class="fa fa-arrow-right"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="footer"
+      style="background-image: url(&quot;assets/img/footer.png&quot;)"
+    >
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-about">
+            <a href="index.html" class="logo"
+              ><span class="logo-text">Stackly</span></a
+            >
+            <p>Aliquam pellentesque pellentesque neque vitae elementum.</p>
+            <div class="footer-contact">
+              <div class="footer-contact-item">
+                <i class="fa fa-phone"></i>
+                <a href="#">+91 9768453201</a>
+              </div>
+              <div class="footer-contact-item">
+                <i class="fa fa-envelope"></i>
+                <a href="#">Stackly@gmail.com</a>
+              </div>
+              <div class="footer-contact-item">
+                <i class="fa fa-map-marker-alt"></i>
+                <a href="#">Chinna Thirupathi, Salem, Tamil Nadu 636008</a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><a href="#">Business Planing</a></li>
+              <li><a href="#">Business Strategy</a></li>
+              <li><a href="#">Marketing Advice</a></li>
+              <li><a href="#">Business Consulting</a></li>
+              <li><a href="#">UX Research</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="404.html">About Us</a></li>
+              <li><a href="404.html">Services</a></li>
+              <li><a href="404.html">Portfolio</a></li>
+              <li><a href="404.html">Blog &amp; News</a></li>
+              <li><a href="404.html">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-subscribe">
+            <h4>Subscribe Now</h4>
+            <p>Pellentesque aliquam sem in tellus fringilla interdum.</p>
+            <div class="subscribe-form">
+              <input type="email" placeholder="Email Address" />
+              <button type="submit"><i class="fa fa-paper-plane"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="footer-bottom-inner">
+            <p>© 2026 Stackly - All rights reserved.</p>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="404.html">About Us</a></li>
+              <li><a href="404.html">Error</a></li>
+              <li><a href="404.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <button id="scrollTop" class="scroll-top" aria-label="Scroll to top">
+      <i class="fa fa-arrow-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+   
+  </body>
+</html>
