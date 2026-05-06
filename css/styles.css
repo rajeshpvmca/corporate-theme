@@ -282,13 +282,12 @@ img {
   display: flex;
   gap: 20px;
 }
-.topbar-left a,
+.topbar-left p,
 .topbar-right a {
   color: #ccc;
   font-size: 0.85rem;
   transition: color 0.3s;
 }
-.topbar-left a:hover,
 .topbar-right a:hover {
   color: var(--primary);
 }
@@ -1308,7 +1307,7 @@ img {
   margin-top: 3px;
   flex-shrink: 0;
 }
-.footer-contact-item a {
+.footer-contact-item p {
   color: #aaa;
   font-size: 0.9rem;
   transition: color 0.3s;
