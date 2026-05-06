@@ -1,3 +1,13 @@
+// ===== Component Loader =====
+const loadComponent = (id, url) => {
+  return fetch(url)
+    .then(response => response.text())
+    .then(data => {
+      const target = document.getElementById(id);
+      if (target) target.innerHTML = data;
+    });
+};
+
 // ===== Preloader =====
 window.addEventListener("load", () => {
   const preloader = document.getElementById("preloader");
@@ -6,12 +16,33 @@ window.addEventListener("load", () => {
     setTimeout(() => (preloader.style.display = "none"), 600);
   }, 3000);
 });
+// ===== Initialize Reusable Components =====
+Promise.all([
+  loadComponent("header-placeholder", "header.html"),
+  loadComponent("footer-placeholder", "footer.html")
+]).then(() => {
+  // Initialize Mobile Nav logic after header is loaded
+  const navToggle = document.getElementById("navToggle");
+  const navMenu = document.getElementById("navMenu");
+  if (navToggle && navMenu) {
+    navToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("open");
+      navToggle.classList.toggle("open");
+      // Prevent background body scroll when menu is open
+      document.body.style.overflow = navMenu.classList.contains("open") ? "hidden" : "";
+    });
+  }
 
-// ===== Mobile Nav Toggle =====
-const navToggle = document.getElementById("navToggle");
-const navMenu = document.getElementById("navMenu");
-if (navToggle && navMenu)
-  navToggle.addEventListener("click", () => navMenu.classList.toggle("open"));
+  // Mobile Submenu Toggle
+  document.querySelectorAll(".has-dropdown > a").forEach((link) => {
+    link.addEventListener("click", function (e) {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        this.parentElement.classList.toggle("active");
+      }
+    });
+  });
+});
 
 // ===== Banner Slider =====
 const slides = document.querySelectorAll(".slide");

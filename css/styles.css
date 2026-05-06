@@ -13,6 +13,7 @@ body {
   font-family: "Segoe UI", sans-serif;
   color: #333;
   line-height: 1.6;
+  padding-top: 106px; /* Compensate for fixed header height */
 }
 a {
   text-decoration: none;
@@ -218,12 +219,12 @@ img {
   to { transform: rotate(360deg); }
 }
 .loader-logo {
-  font-size: 2rem;
-  font-weight: 800;
-  color: var(--primary);
-  letter-spacing: 3px;
-  text-transform: uppercase;
   animation: pulse 1.5s ease-in-out infinite;
+}
+.loader-logo img {
+  height: 50px;
+  width: auto;
+  /* filter: invert(73%) sepia(45%) saturate(3048%) hue-rotate(351deg) brightness(97%) contrast(89%); */
 }
 @keyframes pulse {
   0%, 100% { opacity: 1; }
@@ -259,7 +260,10 @@ img {
 /* ===== Header ===== */
 .header {
   position: sticky;
+  position: fixed; /* Changed from sticky to fixed */
   top: 0;
+  left: 0; /* Ensure full width */
+  width: 100%; /* Ensure full width */
   z-index: 1000;
 }
 .header-topbar {
@@ -296,6 +300,10 @@ img {
 .navbar {
   background: var(--white);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  /* Removed redundant sticky properties as parent .header is fixed */
 }
 .nav-inner {
   display: flex;
@@ -304,16 +312,25 @@ img {
   padding: 15px 0;
   gap: 20px;
 }
-.logo-text {
-  font-size: 1.6rem;
-  font-weight: 800;
-  color: var(--primary);
+.logo-img {
+  height: 40px;
+  width: auto;
+  /* filter: invert(73%) sepia(45%) saturate(3048%) hue-rotate(351deg) brightness(97%) contrast(89%); */
 }
 
 .nav-menu {
   display: flex;
-  gap: 5px;
+  gap: 5px;     
 }
+
+ #navToggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #navToggle.open span:nth-child(2) { opacity: 0; }
+  #navToggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.navbar {
+  position: relative;
+}
+
 .nav-menu > li > a {
   display: block;
   padding: 8px 14px;
@@ -1507,6 +1524,9 @@ img {
   .experience-bg {
     padding: 40px;
   }
+  .portfolio-item {
+    min-width: calc(50% - 15px);
+  }
 }
 
 @media (max-width: 768px) {
@@ -1524,6 +1544,7 @@ img {
     top: 100%;
     left: 0;
     right: 0;
+    height: 100vh;
     background: var(--white);
     padding: 15px 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -1554,8 +1575,13 @@ img {
   .banner {
     height: 450px;
   }
+  .portfolio-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
   .portfolio-item {
-    min-width: calc(80% - 15px);
+    min-width: 100%;
   }
   .solution-inner {
     padding: 35px 25px;
@@ -1610,4 +1636,3 @@ img {
     flex-direction: column;
   }
 }
-
