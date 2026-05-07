@@ -42,6 +42,23 @@ Promise.all([
       }
     });
   });
+
+  // Subscribe Form Validation & Redirect
+  const subscribeForm = document.getElementById("footerSubscribeForm");
+  if (subscribeForm) {
+    subscribeForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const emailInput = subscribeForm.querySelector("input");
+      const emailValue = emailInput.value.trim();
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!emailValue || !emailPattern.test(emailValue)) {
+        alert("Please enter a valid email address.");
+      } else {
+        window.location.href = "404.html";
+      }
+    });
+  }
 });
 
 // ===== Banner Slider =====
